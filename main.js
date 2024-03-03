@@ -30,3 +30,9 @@ a= `${firstName} AL${lastName} ${firstName}`
 // }
 fullName = (first, last) => {return `${first} ${last}`}
 console.log(fullName(firstName,lastName))
+function add(a,b){
+   return a+b
+}
+function addthree(a,b,c){
+    return add(a,add(b,c))
+}
