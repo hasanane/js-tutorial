@@ -5,3 +5,8 @@ function factorial(a){
     }
     return b
 }
+
+const print = function print(){
+console.log('hello')
+}
+print 

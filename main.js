@@ -73,6 +73,20 @@ function example(a,b){
 }
 // this function will return answer of a+b to our code
 // tip: the function will not be actived when we write it, the functions only when we call them will be actived
+// tip: the orginal functions (not the called functions)  will be saved as a code in binary
+// we can call the function as follows
+NameOfFunction(firstVariable,secondVariable)
+// we can make functions that dont need variables (if we dont needs input)
+// we can give the functions a rest parameter as follows
+function NameOfFunction2(a , ...b){
+    console.log(a)
+    console.log(b)
+}
+// when we call this function we can give it as much as we want values and variables
+// example
+NameOfFunction2(1,2,3,4)
+// this function first will print number (1) and second will print numbers (2,3,4) as a array as follows
+// (1) [2,3,4]
 
 // factorial
 
