@@ -90,8 +90,8 @@ NameOfFunction2(1,2,3,4)
 
 // factorial
 
-b = 1
 function factorial(a){
+    b = 1
     for (i = 1; a >= i; i++) {
         b = i*b
     }
