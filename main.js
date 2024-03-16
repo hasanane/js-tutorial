@@ -97,3 +97,53 @@ function factorial(a){
     }
     return b
 }
+
+
+// home work 2
+// callbacks
+
+// map
+
+// with this callback we can make new arrays with another array
+// for an example we want to raise all of a arrays elemts to the power of two and save them in a another array
+num = [1,2,3,4,5,7,9]
+dev = num.map(a => {return a*a})
+// here we have the num array and with map callback we raised all of the elements to the power of two and saved them in dev array
+// now when we print dev array will be like this
+// [  1,  4,  9, 16, 25, 49, 81]
+
+// reduce 
+
+// the function that we put it in this callback should have 2 viriables
+// the first one the arrays elements will be places in it 
+// and the second one going to be a variable that will be saved all the time and dont matter we change the element or not
+// but the first variable every time we change the element, will get reset
+example1 = [e1,e2,e3,e4,e5]
+example2 = example1.reduce(  (a,b) => {
+    // what happend to variables
+}  , 
+// first value of (b) variableb
+  )
+// for example we will get the total value of a array
+numbers = [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8]
+total = numbers.reduce((a,d) => {
+  return a+d
+},0)
+// here first we give the b variable 0 
+// reduce callback is getting every element and add the element to value of b and after that will return it 
+// when it return the value of a+b will be saved in b variable and after that will do the entire process again
+// and at the end will save it to the total variable
+// another example 
+// we want to find the largest element of a array
+numbers = [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8]
+larg = numbers.reduce((a,b) => {
+    if(a>b){
+        return a
+    }
+    else{
+        return b
+    }
+}, 0)
+// here our function will check every element 
+// if the element was bigger than b variable the function will return that element and will be saved in b variable
+// if the b variable was bigger than that element the function will return value of b and the b variable will not change and the function will do the process for the next element
