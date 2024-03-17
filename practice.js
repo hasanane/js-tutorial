@@ -6,7 +6,7 @@ function factorial(a){
     return b
 }
 b = [1,2,3,4,5,7,6]
-console.log(largest2(b))
+
 
 function factorial2(a){
     b = 1
@@ -41,3 +41,15 @@ function largest2(a){
     })
     return b
 }
+numbers = [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8]
+// all = numbers.reduce((accu,curr) =>{
+//     return accu+curr*2
+// } ,0)
+// all*2 = 348
+// all=348/2
+// all=174
+// [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8] = 174
+// [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8]*2 = 174*2
+// [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8]*2 = 348
+all = numbers.map(curr => curr*2).reduce((accu,curr)=> accu + curr)
+console.log(all)
