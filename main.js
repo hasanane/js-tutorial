@@ -205,6 +205,3 @@ all = numbers.map(curr => {
         return 1
     }
 }).reduce((accu,curr) => accu*curr)
-
-
-
