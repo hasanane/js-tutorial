@@ -147,3 +147,64 @@ larg = numbers.reduce((a,b) => {
 // here our function will check every element 
 // if the element was bigger than b variable the function will return that element and will be saved in b variable
 // if the b variable was bigger than that element the function will return value of b and the b variable will not change and the function will do the process for the next element
+
+// sum of twice the even numbers _______________________________________________________________________________________________
+
+// if we want to get the sum of twice the even numbers, we have 2 ways to do it
+numb = [1,2,3,4,5,6]
+
+evenNumb = numb.map(curr => {
+    if (curr %2 == 0){ // here we check the number if its even 
+        return curr*2 // here if its even will doble it and save it
+    }
+    else {
+        return 0 // here if its not even will save it as a 0
+    }
+})
+// here if we print evenNumb will get [0,4,0,8,0,12]
+// now we need to get the sum of the elements
+all = evenNumb.reduce((accu,curr) => {
+    return accu + curr
+}, 0)
+
+// we can do these two together like this
+all = numb.map(curr => {
+    if (curr %2 ==0){
+        return curr*2
+    }
+    else {
+        return 0
+    }
+}).reduce((accu,curr)=> accu + curr )
+
+// second way
+
+// here we can use callback calld filter
+// filter callback used to filter arrays elements and save the filtered elements in a new array 
+// this callback just get true or false to filter
+evenNumb = numb.filter(curr => (curr %2 ==0)) // here we check the elements and save the even numbers
+// now if we print the evenNumb will get [2,4,6]
+doubledNumb = evenNumb.map(curr => curr*2) // here with map callback we double the elements
+// now if we print the doubledNumb will get [4,8,12]
+all = doubledNumb.reduce((accu,curr) => accu+curr) // here we get the sum of the elements
+// we can do these two together like this
+all = numb.filter(curr => (curr %2 ==0)).map(curr => curr*2).reduce((accu,curr) => accu+curr)
+
+// homeWorks
+
+all = numbers.filter(curr => {
+    return (curr % 2 != 0)
+  }).map(curr => curr*2).reduce((accu,curr)=> accu*curr)
+    
+//   second way
+all = numbers.map(curr => {
+    if(curr % 2 != 0){
+        return curr*2
+    }
+    else {
+        return 1
+    }
+}).reduce((accu,curr) => accu*curr)
+
+
+

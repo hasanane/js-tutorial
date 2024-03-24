@@ -51,5 +51,16 @@ numbers = [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8]
 // [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8] = 174
 // [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8]*2 = 174*2
 // [2,5,8,3,5,7,5,7,8,6,5,54,4,4,3,5,6,6,7,7,7,2,8]*2 = 348
-all = numbers.map(curr => curr*2).reduce((accu,curr)=> accu + curr)
-console.log(all)
+all = numbers.filter(curr => {
+  return (curr % 2 != 0)
+}).map(curr => curr*2).reduce((accu,curr)=> accu*curr)
+
+alll = numbers.map(curr => {
+    if(curr % 2 != 0){
+        return curr*2
+    }
+    else {
+        return 1
+    }
+}).reduce((accu,curr) => accu*curr)
+console.log(alll)
