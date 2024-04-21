@@ -46,11 +46,13 @@ var name: string = "Hasanain Alsoudani"
 // using classes
 
 class User {
+  // attribute, property
   username: string
   password: string
   name: string
   avatarLink: string
 
+  // behavior, method
   getFirstName = () => {
     return this.name.split(" ")[0]
   }
@@ -82,3 +84,35 @@ var selectedWalletIndex = 1
 var user = hasanain
 var mainPage = billingPage
 
+
+class Person {
+  healthLevel: number
+  tardinessLevel: number
+  
+  isSick = () => {
+    return this.healthLevel < 5
+  }
+
+  isRegularlyTardy = () => {
+    return this.tardinessLevel > 3
+  }
+
+  constructor(healthLevel, tardinessLevel) {
+    this.healthLevel = healthLevel
+    this.tardinessLevel = tardinessLevel
+  }
+}
+
+var jack: Person = new Person(8, 6)
+var zack: Person = new Person(5, 5)
+
+// abstraction
+var shouldIFireJack = () => {
+  if (jack.isRegularlyTardy()) {
+    if (jack.isSick()) {
+      return false
+    }
+    return true
+  }
+  return false
+}
