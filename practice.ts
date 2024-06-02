@@ -24,7 +24,7 @@ var password: string = "1234nfd23149"
 var avatarLink: string = "https://asdoijasdk.asdkjahl"
 var username: string = "Hasanain"
 var password: string = "1234nfd23149"
-var name: string = "Hasanain Alsoudani"
+var nameee: string = "Hasanain Alsoudani"
 
 
 // user billing page
@@ -32,7 +32,7 @@ var walletConnections: string[] = ["wallet1", "wallet2"]
 var avatarLink: string = "https://asdoijasdk.asdkjahl"
 var username: string = "Hasanain"
 var password: string = "1234nfd23149"
-var name: string = "Hasanain Alsoudani"
+var namee: string = "Hasanain Alsoudani"
 
 
 // wallet setting
@@ -41,7 +41,7 @@ var walletConnections: string[] = ["wallet1", "wallet2"]
 var avatarLink: string = "https://asdoijasdk.asdkjahl"
 var username: string = "Hasanain"
 var password: string = "1234nfd23149"
-var name: string = "Hasanain Alsoudani"
+var nameeee: string = "Hasanain Alsoudani"
 
 // using classes
 
@@ -70,6 +70,7 @@ hasanain.username = "Hasanain"
 hasanain.password = "1234nfd23149"
 hasanain.name = "Hasanain Alsoudani"
 hasanain.getFirstName()
+
 // user billing page with objects
 
 class WalletBillingPage {
@@ -84,7 +85,6 @@ var selectedWalletIndex = 1
 var user = hasanain
 var mainPage = billingPage
 
-
 class Person {
   healthLevel: number
   tardinessLevel: number
@@ -92,7 +92,6 @@ class Person {
   isSick = () => {
     return this.healthLevel < 5
   }
-
   isRegularlyTardy = () => {
     return this.tardinessLevel > 3
   }
@@ -105,7 +104,7 @@ class Person {
 
 var jack: Person = new Person(8, 6)
 var zack: Person = new Person(5, 5)
-
+jack.healthLevel = 9
 // abstraction
 var shouldIFireJack = () => {
   if (jack.isRegularlyTardy()) {
