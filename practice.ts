@@ -79,7 +79,7 @@ var selectedWalletIndex = 1;
 var user = hasanain;
 var mainPage = billingPage;
 
-class Person {
+class erson {
   healthLevel: number;
   tardinessLevel: number;
 
