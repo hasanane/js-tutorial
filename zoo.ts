@@ -1,7 +1,6 @@
 export class Zoo {
   cash: number;
   domestic: Animal[];
-  wild: Animal[];
   carniAquatic: Animal[];
   herbiAquatic: Animal[];
   carniBird: Animal[];
@@ -13,16 +12,15 @@ export class Zoo {
   carniAquarium: number;
   herbiAquarium: number;
   #wild: Animal[];
-  getWild() {
+  get wild() {
     return this.#wild;
   }
-  setWild(array: Animal[]) {
+  set wild(array: Animal[]) {
     if (array.length != 0) {
       this.#wild = array;
     }
   }
   catalog = (type: string) => {
-    this.#wild;
     let typeCatalog = {
       wild: {
         num: this.wildCage,

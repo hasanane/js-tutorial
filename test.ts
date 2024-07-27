@@ -13,5 +13,5 @@ var sparrow = new Animal({ name: "hasan", type: "herbiBird", cost: 1200 });
 
 zoo.Animalsell(sparrow);
 
-zoo.#wild = [];
-console.log(zoo.readfunction());
+zoo.wild = [];
+console.log(zoo.wild);
