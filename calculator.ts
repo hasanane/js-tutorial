@@ -5,10 +5,10 @@
 //      example: calc = Calculator(2)
 //      console.log(calc.add(1).substract(2).divide(4).add(12).multiply(13).fullEquation)
 //      2 + 1 - 2 / 4 + 12 * 13 = 159.25
-// 3. the calculator has to support method chaining:
+// 4. the calculator has to support method chaining:
 //      example: calc.add(1).substract(2).divide(4).add(12).multiply(13) ...etc.
 //      Note: the operations can be done left to right without respecting operation precendece
-// 4. the calculator has to have a way to "undo" operations.
+// 5. the calculator has to have a way to "undo" operations.
 //      example: calc = new Calculator(4)
 //              calc.add(4).substract(2).equals // 6
 //              calc.add(4).substract(2).equals.undo(1) // 8
@@ -17,7 +17,7 @@
 //                      calc.add(4).substract(2).equals.undo(1).fullEquation // 8
 //                      // WRONG OUTPUT: 4 + 4 - 2 + 2 = 8
 //                      // CORRECT OUTPUT: 4 + 4 = 8
-// 5. write a few comments on how you would go about supporting order of operations in this calculator?
+// 6. write a few comments on how you would go about supporting order of operations in this calculator?
 // Consider the following in your commentary:
 //      * Composition vs inheritance? which one would be helpful here?
 //  * Is it better to know this requirement at the beginning of the work? if so, why?
@@ -56,26 +56,26 @@ class Calculator {
     var i: number;
     if (num < 1 || num > this.operations.length) {
       console.log(`cant undo ${num} times 
-the value without undo is :`)
+the value without undo is :`);
       return this;
     } else {
       for (i = 0; i < num; i++) {
         if (this.operations[this.operations.length - 1] == "+") {
           this.equals = this.equals - this.numbers[this.numbers.length - 1];
-          this.operations.pop()
-          this.numbers.pop()
+          this.operations.pop();
+          this.numbers.pop();
         } else if (this.operations[this.operations.length - 1] == "-") {
           this.equals = this.equals + this.numbers[this.numbers.length - 1];
-          this.operations.pop()
-          this.numbers.pop()
+          this.operations.pop();
+          this.numbers.pop();
         } else if (this.operations[this.operations.length - 1] == "*") {
           this.equals = this.equals / this.numbers[this.numbers.length - 1];
-          this.operations.pop()
-          this.numbers.pop()
+          this.operations.pop();
+          this.numbers.pop();
         } else {
           this.equals = this.equals * this.numbers[this.numbers.length - 1];
-          this.operations.pop()
-          this.numbers.pop()
+          this.operations.pop();
+          this.numbers.pop();
         }
       }
       return this;
