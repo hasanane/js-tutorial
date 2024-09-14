@@ -99,4 +99,4 @@ the value without undo is :`);
   }
 }
 var cal = new Calculator(3);
-console.log(cal.add(2).divide(2).divide(5).undo(4).fullEquation);
+console.log(cal.add(2).divide(2).divide(5).undo(3).fullEquation);
