@@ -27,7 +27,9 @@ class Calculator {
   #fullEquation: string;
   operations: string[];
   numbers: number[];
+
   test_1: number;
+
   add(num: number) {
     this.equals = this.equals + num;
     this.operations[this.operations.length] = "+";
